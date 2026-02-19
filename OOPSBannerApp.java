@@ -1,7 +1,8 @@
 /**
-* Printing OOPS Banner using Arrays and Loops
+* Printing OOPS Banner using Array and Inline Array Initialization
+*
 * @author Developer
-* @version 4.0
+* @version 5.0
 */
 
 class OOPSBannerArray{
