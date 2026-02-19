@@ -1,7 +1,7 @@
 /**
-* Printing OOPS Banner using Arrays and Loops
+* Printing OOPS Banner using static Funtions for each letter
 * @author Developer
-* @version 4.0
+* @version 6.0
 */
 
 class OOPSBannerArray{
