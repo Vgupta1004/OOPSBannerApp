@@ -44,3 +44,21 @@
 - Created the **feature/UC6:PrintOOPS** branch.  
 - Added and committed the file.  
 - Pushed the updates and merged them into **dev**.
+
+---
+
+## Date: 19-02-26
+
+### UC7
+- Created a file that prints "OOPS" using HashMaps.
+- Created the **feature/UC7* branch
+- Added and committed the file.
+- Pushed and updates and merged them into **dev**.
+
+---
+
+## Date: 20-02-26
+
+### UC8
+- Created a file that prints "OOPS" using Map Collection
+- Created the **feature/UC8-HashMaps** branch
