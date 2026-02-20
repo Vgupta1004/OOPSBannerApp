@@ -1,11 +1,13 @@
 
 /**
- * Printing OOPS Banner using Arrays and Loops (UC7: Nested Class + String[] Patterns)
- * A program that stores each letter as a 7-line String[] and
- * renders a word by concatenating corresponding rows.
+ * Creates a HashMap containing ASCII art patterns for supported characters.
+ *
+ * Each character is mapped to an array of strings where each string represents
+ * one line of the characters's ASCII art pattern. All patterns are assumed to have
+ * the same height.
  *
  * @author Developer
- * @version 7.0
+ * @version 8.0
  */
 
 import java.util.*;
