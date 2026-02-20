@@ -8,24 +8,25 @@
  * @version 7.0
  */
 
-
-
+import java.util.*;
 
 class OOPSBannerArray{
 	
-	static class Patterns{
+	public static HashMap<Character,String[]> createCharMap(){
 		
-		static String[] O = {
-            "  ***  ",
+		HashMap<Character,String[]> charMap = new HashMap<>();
+		
+		charMap.put('O',new String[] {
+			"  ***  ",
             " ** ** ",
             "**   **",
             "**   **",
             "**   **",
             " ** ** ",
             "  ***  "
-        };
+		});
 		
-		static String[] P = {
+		charMap.put('P',new String[] {
 			"****  ",
 			"**  **",
 			"**  **",
@@ -33,9 +34,9 @@ class OOPSBannerArray{
 			"**    ",
 			"**    ",
 			"**    "
-		};
+		});
 		
-		static String[] S = {
+		charMap.put('S',new String[] {
 			"  ***** ",
 			" **   **",
 			"**      ",
@@ -43,50 +44,36 @@ class OOPSBannerArray{
 			"      **",
 			"**   ** ",
 			" *****  "
-		};
+		});
 		
-		static String[] get(char c){
-			switch (Character.toUpperCase(c)){
-				case 'O':
-					return O;
-				case 'P':
-					return P;
-				case 'S':
-					return S;
-				default:
-					return new String[] {
-						"       ",
-						"       ",
-						"       ",
-						"       ",
-						"       ",
-						"       ",
-						"       "
-					};
-			}
-		}		
+		return charMap;
 	}
+	
+	public static void dispBanner(String msg, HashMap<Character,String[]> charMap){
+		
+		String del = "  ";
+		StringBuilder sb[] = new StringBuilder[7];
+		int h = charMap.get('O').length;
+		for (int i=0;i<msg.length();i++){
+			String[] pat = charMap.get(msg.charAt(i));
+			for(int r = 0;r<h;r++){
+				sb[r].append(pat[r]);
+			}
+			if(i<msg.length() - 1){
+				for (int r=0; r<h;r++) sb[r].append(del);
+			}
+		}
+		
+		for(int r = 0; r<h; r++){
+			System.out.println(sb[r]);
+		}
+	}
+		
+	
 	
 	public static void main(String args[]){
 		String word = "OOPS";
-		String del = "  ";
-		StringBuilder rows[] = new StringBuilder[7];
-		for (int i = 0; i < 7; i++) rows[i] = new StringBuilder();
-		
-		
-		for (int i = 0; i < word.length(); i++) {
-            String[] pat = Patterns.get(word.charAt(i));
-            for (int r = 0; r < 7; r++) {
-                rows[r].append(pat[r]);
-            }
-            if (i < word.length() - 1) {
-                for (int r = 0; r < 7; r++) rows[r].append(del);
-            }
-        }
-		
-		
-		for (int r = 0; r < 7; r++) {
-            System.out.println(rows[r]);
-        }	
+		HashMap<Character, String[]> charMap = createCharMap();
+		dispBanner(word,charMap);
 	}
 }
